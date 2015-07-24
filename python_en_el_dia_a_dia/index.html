@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Python en el dia a dia</title>
+
+		<meta name="description" content="Charla sobre el uso de python para resolver problemas del dia a dia">
+		<meta name="author" content="Luis Salazar (l4sh)">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../bower_components/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../bower_components/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports ->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>-->
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+            # Python en el dia a dia
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+              ## Luis Salazar
+
+              ### l4sh
+
+              [l4sh0 @ twitter.com](https://twitter.com/l4sh0)
+
+              [l4sh @ github.com](https://github.com/l4sh)
+
+              [l4sh @ soundcloud.com](https://soundcloud.com/l4sh)
+
+              [braindumpve.wordpress.com](https://braindump-ve.wordpress.com)
+
+              [github.com/l4sh/slides](https://github.com/l4sh/slides)
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## ¿Que es python?
+
+            Lenguaje de programacion interpretado de alto nivel.
+
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Ventajas
+
+            * Facil de aprender
+            * No requiere compilacion
+            * Soporte para multiples plataformas
+            * Popular
+              * Amplio soporte
+              * Gran cantidad de bibliotecas y paquetes disponibles (~10064 paquetes estables en PyPI)
+              * Bastante documentacion disponible
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Comenzando
+
+            Descarga: [python.org/downloads](https://www.python.org/downloads/)
+
+            * [Script](#/6)
+            * [Shell](#/7)
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Script
+
+            Archivo: 'hola.py'
+            ```python
+            user = 'Luis'
+            print('Hola ' + user)
+            ```
+
+            Al ejecutar `python hola.py`
+            ```
+            Hola Luis
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Shell
+
+            Al ejecutar `python`
+            ```
+            Python 2.7.10 (default, May 27 2015, 18:11:38)
+            [GCC 5.1.1 20150422 (Red Hat 5.1.1-1)] on linux2
+            Type "help", "copyright", "credits" or "license" for more
+            information.
+            >>> user = 'Luis'
+            >>> print('Hola ' + user)
+            Hola Luis
+            >>>
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## ¿Que podemos hacer con python?
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ```python
+            import antigravity
+            ```
+
+            ![Import antigravity](img/python_xkcd_1.png)
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Procesamiento numérico
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Calculadora
+
+            ```python
+            >>> 2 + 2
+            4
+            >>> 100 - 2
+            98
+            >>> 10 / 2
+            5
+            >>> 4 ** 2
+            16
+            >>> ((10.0 + 5) / (10 ** 2)) + 32
+            32.15
+            >>> import math
+            >>> math.sqrt(16)
+            4.0
+            >>> math.pi * (12 ** 2)
+            452.3893421169302
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Calculadora
+
+            ```python
+            >>> pantalon = 10000
+            >>> iva = 1.12
+            >>> camisa = 5000
+            >>> envio = 200
+            >>> (pantalon + camisa) * iva
+            16800.0
+            >>> ((pantalon + camisa) * iva) + envio
+            17000.0
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Procesamiento de texto
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Reemplazar texto
+
+            ```python
+            >>> 'Carro'.replace('ro', 'ta')
+            'Carta'
+
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Eliminar espacios al principio y final de texto
+
+            ```python
+            >>> '     texto     '.strip()
+            'texto'
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Obtener palabra *n* de texto
+
+            ```python
+            >>> s = 'Ipsa tumida ab o! Quo summo oblivia.'
+            >>> s.split()
+            ['Ipsa', 'tumida', 'ab', 'o!', 'Quo', 'summo', 'oblivia.']
+            >>> s.split()[5]
+            'summo'
+            ```
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Mayusculas / minusculas
+
+            *LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT...*
+
+            ```python
+            >>> texto.lower()
+            'lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            ```
+
+            ```python
+            >>> texto.upper()
+            'LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT...
+            ```
+
+            ```python
+            >>> texto.capitalize()
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Manipular archivos y directorios
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Leer archivo
+            ```
+            >>> f = open('archivo.txt')
+            >>> f.readlines()
+            ['linea 1', 'linea 2', 'linea 3']
+            ```
+
+            ### Escribir a archivo
+            ```python
+            >>> f = open('archivo.txt', 'w')
+            >>> f.write('Prueba')
+            >>> f.close()
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Crear directorios
+
+            ```
+            >>> import os
+            >>> os.makedirs('nuevo_directorio')
+            ```
+
+            Funcion básica para creacion de directorio
+
+            ```
+            >>> def create_dir(dir_name):
+            ...     if not os.path.exists(dir_name):
+            ...         os.makedirs(dir_name)
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Copiar archivos
+
+            ```python
+            >>> import shutil
+            >>> shutil.copyfile('a/origen.txt', 'b/destino.txt')
+            ```
+
+            Funcion básica para copia de archivo
+            ```python
+            >>> def copy(src, dest):
+            ...     if not os.path.exists(dest):
+            ...         shutil.copyfile(src, dest)
+            ...     else:
+            ...         print(dest + ' existe, ignorando...')
+            ```
+          </script>
+        </section>
+
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Aplicaciones de linea de comandos con opciones
+
+            ```python
+            #! /usr/bin/python
+            import argparse
+
+            parser = argparse.ArgumentParser(description='Aplicacion de prueba')
+
+            parser.add_argument('-a', action="store_true", default=False)
+            parser.add_argument('-b', action="store", dest="b")
+            parser.add_argument('-c', action="store", dest="c", type=int)
+
+            print parser.parse_args()
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Aplicaciones de linea de comandos con opciones
+
+            Al ejecutar con opcion `-h` (ayuda)
+            ```
+            $ test.py -h
+            usage: test.py [-h] [-a] [-b B] [-c C]
+
+            Aplicacion de prueba
+
+            optional arguments:
+              -h, --help  show this help message and exit
+              -a
+              -b B
+              -c C
+            ```
+
+            Al ejecutar especificando las diferentes opciones
+            ```
+            $ test.py -b prueba -a -c 3
+            Namespace(a=True, b='prueba', c=3)
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## En la vida real
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Eliminando espacios innecesarios
+
+            ```python
+            'Ipsa       tumida ab     o! Quo summo        oblivia.'
+            ```
+
+            ```python
+            >>> s.split()
+            ['Ipsa', 'tumida', 'ab', 'o!', 'Quo', 'summo', 'oblivia.']
+            >>> ' '.join(s.split())
+            'Ipsa tumida ab o! Quo summo oblivia.'
+            ```
+
+            ```python
+            >>> import re
+            >>> re.sub(' +', ' ', s)
+            'Ipsa tumida ab o! Quo summo oblivia.'
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Calcular cantidad de días entre dos fechas
+
+            ```python
+            >>> from datetime import date
+            >>> f0 = date(2015, 1, 1)
+            >>> f1 = date(2015, 7, 24)
+            >>> delta = f1 - f0
+            >>> delta.days
+            204
+            ```
+
+            Cantidad de semanas
+
+            ```python
+            >>> delta.days / 7
+            29
+            >>> delta.days / 7.0
+            29.142857142857142
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Generar contraseñas
+
+            ```python
+            >>> import random
+            >>> password = ''
+            >>> for i in range(0, 16):
+            ...     password += chr(random.randint(33,126))
+            ...
+            >>> print(password)
+            II!c.qe@(#0t^CrR)
+            ```
+
+            Alternativamente usando list comprehensions
+            ```python
+            ''.join([chr(random.randint(33,126)) for i in range(0,16)])
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### ¿Por que de 33 a 126?
+
+            ![ASCII Table](img/ascii_table.png)
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Organizar respaldo de maildir
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Carpetas en thunderbird
+
+            ![Screenshot maildir](img/thunderbird_screenshot.png)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Estructura Maildir
+
+            ```
+            Maildir
+            ├── cur
+            ├── new
+            ├── tmp
+            ├── .sub
+            ├── .sub.sub1
+            ├── .sub.sub1.sub1a
+            ├── .sub.sub1.sub1b
+            ├── .sub.sub1.sub1c
+            ├── .sub.sub2
+            ├── .sub.sub2.sub2a
+            ├── .sub.sub2.sub2b
+            ├── .sub.sub2.sub2c
+            ├── .sub.sub3
+            ├── .sub.sub3.sub3a
+            ├── .sub.sub3.sub3b
+            └── .sub.sub3.sub3c
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Estructura deseada
+
+            ```
+            emails
+            ├── inbox
+            ├── sub1
+            │   ├── sub1a
+            │   ├── sub1b
+            │   └── sub1c
+            ├── sub2
+            │   ├── sub2a
+            │   ├── sub2b
+            │   └── sub2c
+            └── sub3
+                ├── sub3a
+                ├── sub3b
+                └── sub3c
+
+            ```
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Asi se ve un directorio `cur` en Maildir
+
+            ![Screenshot maildir](img/maildir_screenshot.png)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Nombres de archivo
+
+            Origen: formato de nombre de arhivo maildir
+
+            ```bash
+            1234567890.M4235366436.mailserver,S=4542,W=4550:2,Sb
+            7457574745.M5325235325.mailserver,S=6732,W=6742:2,Sb
+            6576575675.M4565464562.mailserver,S=5235,W=5255:2,Sb
+            4324234234.M20046P2137.mailserver,S=8678,W=8688:2,Sb
+            5675675676.M20046P2137.mailserver,S=4343,W=4363:2,Sb
+            7567567567.M20046P2137.mailserver,S=8768,W=8778:2,Sb
+            ```
+
+            Destino: Archivo con extension *.eml*
+
+            ```bash
+            1234567890_M4235366436_mailserver.eml
+            7457574745_M5325235325_mailserver.eml
+            6576575675_M4565464562_mailserver.eml
+            4324234234_M20046P2137_mailserver.eml
+            5675675676_M20046P2137_mailserver.eml
+            7567567567_M20046P2137_mailserver.eml
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            Crear directorios
+
+            ```python
+            >>> dir_list = os.listdir('Maildir')
+            >>> for directory in dir_list:
+            ...     directory = directory.replace('.','/')
+            ...     create_dir(directory)
+            ```
+
+            Copiar archivos
+
+            ```python
+            ...
+            >>> for i in filelist:
+            ...    # Archivo de origen
+            ...    src = os.path.join(src_path, i)
+            ...
+            ...    # Archivo de destino
+            ...    dest_file = i.split(',')[0].replace('.', '_') + '.eml'
+            ...    dest = os.path.join(dest_path, dest_file)
+            ...
+            ...    # Copiar archivo
+            ...    copy(src, dest)
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Probar SMTP
+
+            ```python
+            import smtplib
+
+            message = '''
+            From: Emisor <usuario@gmail.com>
+            To: Destinatario <ejemplo@example.com>
+            Subject: Prueba
+
+            Mensaje de prueba
+            '''
+
+            server = smtplib.SMTP_SSL('smtp.gmail.com')
+            server.login('usuario@gmail.com', 'pass12345')
+            server.sendmail('usuario@gmail.com', 'ejemplo@example.com',
+                            message)
+            ```
+          </script>
+        </section>
+
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Leer archivos PDF
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Leyendo PDF con PyPDF2
+
+            ```
+            >>> import PyPDF2
+            >>> pdf_file = open('The_Complete_Works_of_H.P._Lovecraft.pdf', 'rb')
+            >>> pdf_read = PyPDF2.PdfFileReader(pdf_file)
+            >>> pdf_read.numPages
+            708
+            >>> page = pdf_read.getPage(99)
+            >>> page.extractText()
+            u'The Quest of Iranon\n \n(1921)\n \nInto the granite city of
+            Teloth wandered the youth, vine\n-\ncrowned, his yellow hair
+            glistening with \nmyrrh and his purple robe torn with briers
+            of the mountain Sidrak that lies across the antique \nbridge
+            ...
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Archivo PDF utilizado
+
+            ![PDF screenshot](img/pdf_screenshot.png)
+
+            [arkhamarchivist.com/free-complete-lovecraft-ebook-nook-kindle/](http://arkhamarchivist.com/free-complete-lovecraft-ebook-nook-kindle/)
+
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Texto obtenido
+
+            ```
+            The Quest of Iranon
+
+            (1921)
+
+            Into the granite city of Teloth wandered the youth, vine
+            -
+            crowned, his yellow hair glistening with
+            myrrh and his purple robe torn with briers of the mountain Sidrak that lies across the antique
+            bridge of stone. The men of Teloth are dark and stern, and dwell in square houses, and with
+            frowns they asked the stranger whence he had come and what were his name and fortune.
+            So the youth answered:
+
+
+            I am Iranon, and come from Aira, a far city that I rec
+            all only dimly but seek to find again. I am...
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Generar temas para
+            ### i3 + j4-make-config
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### i3 tiling window manager
+
+            ![i3 window manager](img/i3_screenshot.png)
+
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### j4-theme-gen
+
+            Generador de temas para i3 en base a esquema de colores de terminal en formato Xresources
+
+            ![j4-theme-gen example](img/j4-theme-gen.gif)
+
+            [github.com/l4sh/j4-theme-gen](https://github.com/l4sh/j4-theme-gen)
+          </script>
+				</section>
+
+
+        <section data-markdown>
+          <script type="text/template">
+            #### terminal.sexy
+
+            ![terminal.sexy](img/terminal_sexy_screenshot.png)
+
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Resultado
+
+            ![Colorscheme + Tema](img/colorscheme_theme_screenshot.png)
+
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Formato de archivo de entrada
+
+            ```
+            !!! Fonts
+            *font: xft:Source\ Code\ Pro:pixelsize=13
+
+            !! transparency
+            URxvt*depth: 32
+            URxvt*background: rgba:00aa/00ff/1144/e0e0
+            ! special
+            *.foreground:   #98d1ce
+            #*.background:   #0a0f14
+            *.cursorColor:  #98d1ce
+
+            ! black
+            *.color0:       #0a0f14
+            *.color8:       #10151b
+
+            ! red
+            *.color1:       #c33027
+            ...
+            ```
+          </script>
+				</section>
+
+
+        <section data-markdown>
+          <script type="text/template">
+            Opciones usando argparse
+
+            ```python
+            ### Parse arguments
+            parser = argparse.ArgumentParser(description = help_text)
+
+            parser.add_argument('-i', action='store', dest='input_file',
+                help='input file -- If not specified it will try to use .Xdefaults',
+                nargs=1)
+
+            parser.add_argument('-c', action='store', dest='main_color',
+
+            help='main_color (as number {1..7} or hexadecimal) -- If not ' +
+                 'specified it will randomly select one from the palette', nargs=1)
+
+            parser.add_argument('-o', action='store', dest='output_file',
+                help='output file', nargs=1)
+            ...
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Texto de ayuda mostrado
+
+            Al ejecutar `j4-theme-gen -h`
+
+            ```
+            usage: j4-theme-gen [-h] [-i INPUT_FILE] [-c MAIN_COLOR]
+            [-o OUTPUT_FILE] [-r]
+                    [-s]
+
+            A theme generator for j4-make-config. It takes a .Xdefaults
+            color scheme file and generates a theme for j4-make-config.
+            For more information check https://github.com/l4sh/j4-theme-gen
+
+            optional arguments:
+              -h, --help      show this help message and exit
+              -i INPUT_FILE   input file -- If not specified it will try to
+              use .Xdefaults
+              -c MAIN_COLOR   main_color (as number {1..7} or hexadecimal)
+              -- If notspecified it will randomly select one from the palette
+              -o OUTPUT_FILE  output file
+            ...
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Plantilla
+
+            ```python
+            theme_template = '''# Theme generated with j4-theme-gen
+            # for more information visit https://github.com/l4sh/j4-theme-gen
+            #
+            # $i3-theme-window
+            # class                 border  backgr. text    indicator
+            client.focused            {1}    {0}     {1}       {0}
+            client.focused_inactive   {4}    {1}     {2}       {3}
+            client.unfocused          {4}    {4}     {2}       {1}
+            client.urgent             {1}    {5}     {2}       {5}
+            # $i3-theme-bar
+            colors {{
+            	background {4}
+            	statusline {2}
+            	focused_workspace  {1} {0} {1}
+            	active_workspace   {4} {1} {2}
+            	inactive_workspace {4} {1} {2}
+            }}
+            '''
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Procesamiento
+
+            ```
+            if 'color' in main_color:
+                _m = color_scheme[main_color]
+            else:
+                _m = main_color
+
+            new_theme = theme_template.format(_m, color_scheme['background'],
+                color_scheme['foreground'], color_scheme['color8'],
+                color_scheme['color0'], color_scheme['color1'])
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Escribir a archivo
+
+            ```
+            ...
+            try:
+                ### Create themes dir if not found
+                if not os.path.exists(i3_themes_dir):
+                    print('Themes directory not found. Creating...')
+                    try:
+                        os.makedirs(i3_themes_dir)
+                    except:
+                        throw_err('Could not create themes directory')
+                ### Write to file
+                output_file = open(output_fname, 'w')
+                output_file.write(new_theme)
+                output_file.close()
+            except:
+                throw_err('Cannot write theme file.')
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            #### Archivo de tema obtenido
+
+            ```
+            # Theme generated with j4-theme-gen
+            # for more information visit https://github.com/l4sh/j4-theme-gen
+            #
+            # $i3-theme-window
+            # class                 border  backgr. text    indicator
+            client.focused            #000000    #571dc2     #000000       #571dc2
+            client.focused_inactive   #000000    #000000     #ffffff       #38372c
+            client.unfocused          #000000    #000000     #ffffff       #000000
+            client.urgent             #000000    #571dc2     #ffffff       #571dc2
+            # $i3-theme-bar
+            colors {
+            	background #000000
+            	statusline #ffffff
+            	focused_workspace  #000000 #571dc2 #000000
+            	active_workspace   #000000 #000000 #ffffff
+            	inactive_workspace #000000 #000000 #ffffff
+            }
+            ```
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ```
+            IndexError: list index out of range
+            ERROR: Internal Python error in the antigravity module.
+            ```
+            ![WHAM!](img/python_xkcd_2.png)
+
+          </script>
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Mas informacion
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Recomendaciones
+
+            * Utilizar una shell mejorada como IPython o IDLE
+            * Utilizar editores que ofrescan sugerencias respecto al estilo del codigo de acuerdo a [PEP-8](https://www.python.org/dev/peps/pep-0008/)
+            * Consultar mas alla de la documentación, usualmente se encuentran pequeños trucos e incluso soluciones al problema que intentas resolver en sitios como [stackoverflow.com](http://stackoverflow.com/), blogs y foros
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Material de aprendizaje
+
+            * Sitio oficial - [python.org](https://www.python.org)
+            * Learn Python the Hard Way - [learnpythonthehardway.org](http://learnpythonthehardway.org/)
+            * Automate the Boring Stuff with Python - [automatetheboringstuff.com/](https://automatetheboringstuff.com/)
+            * Python Module of the Week - [pymotw.com](http://pymotw.com)
+            * Python @ Codecademy - [codecademy.com/en/tracks/python-traduccion-al-espanol-america-latina-clone-1](https://www.codecademy.com/en/tracks/python-traduccion-al-espanol-america-latina-clone-1)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ### Comunidad
+
+            * Python (PSF) [python.org/community/](https://www.python.org/community/)
+              * Twitter: [@ThePSF](http://twitter.com/ThePSF)
+              * IRC `#python` @ Freenode
+            * Python Venezuela - [python.org.ve/](http://python.org.ve/)
+              * Twitter: [@pyconve](https://twitter.com/pyconve)
+              * Listas de correo: [groups.google.com/forum/#!forum/python-venezuela](https://groups.google.com/forum/#!forum/python-venezuela)
+              * IRC: `#python-ve` @ Freenode
+            * Python Hispano - [python-hispano.org/](http://www.python-hispano.org/)
+              * Twitter: [@pythonhispano](https://twitter.com/pythonhispano)
+              * Listas de correo: [groups.google.com/forum/#!forum/pythonhispano](https://groups.google.com/forum/#!forum/pythonhispano)
+
+          </script>
+        </section>
+
+
+        <section data-markdown>
+          <script type="text/template">
+            ## FIN
+
+            Puedes descargar estos slides de
+
+            [github.com/l4sh/slides](https://github.com/l4sh/slides)
+
+          </script>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="../bower_components/reveal.js/js/reveal.js"></script>
+    <pre>
+      <code></code>
+    </pre>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

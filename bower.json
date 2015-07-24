@@ -1,0 +1,20 @@
+{
+  "name": "talks_n_stuff",
+  "version": "0.0.0",
+  "authors": [
+    "l4sh <l4sh.dev@gmail.com>"
+  ],
+  "description": "Talks and other stuff",
+  "license": "CC-BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)",
+  "homepage": "https://github.com/l4sh/talks_n_stuff",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~3.1.0"
+  }
+}
